@@ -20,6 +20,5 @@ This script takes 4 arguments to run:
 4. Product Preview Sample URL
 
 Examples:
-#`		./escrow.sh sampleFileRead.txt myemail@myemailaddress.com 1Kmib4CidHnpKh2dge68yzaH1aviB7DjxR http://g.recordit.co/7yes2i5gUa.gif
-` 
+`./escrow.sh sampleFileRead.txt myemail@myemailaddress.com 1Kmib4CidHnpKh2dge68yzaH1aviB7DjxR http://g.recordit.co/7yes2i5gUa.gif` 
 ![http://g.recordit.co/IJL5eM6Pt6.gif](http://g.recordit.co/IJL5eM6Pt6.gif)
