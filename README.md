@@ -19,6 +19,21 @@ This script takes 4 arguments to run:
 3. Your BTC payment Address
 4. Product Preview Sample URL
 
-Examples:
+Cli Example:
 `./escrow.sh sampleFileRead.txt myemail@myemailaddress.com 1Kmib4CidHnpKh2dge68yzaH1aviB7DjxR http://g.recordit.co/7yes2i5gUa.gif` 
+
+Video Demonstration of what SHOULD Happen
 ![http://g.recordit.co/IJL5eM6Pt6.gif](http://g.recordit.co/IJL5eM6Pt6.gif)
+
+# Some Advice | Pointers | Feedback:
+1. I wrote this on OSX so if you're using windows, you will need to likely remove the first line then change the extension to `.py` from `.sh`.  Now you should be able to run the script in windows by using `python escrow.py {args}`
+2. The Script I'm acutally using in practice has all but the first argv[x] variables commented out...I did this because I intend on using this script for a sole client and it would be excessive for me to enter in those arguments each time.  I also have setup my file such that the arguments are stored there (but didn't think it made sense to impose that restriction when designing this script)
+3. This script hasn't been tested extensively...if you use the same address to receive payments more than once the mechanism will not work as intended as it releases funds based on the confirmed amount being greater than or equal to the payment amount set.
+
+
+#TODO:
+
+1. Setup an sys.argv[X] for loading attachments (instead of only text files)
+
+Welcomed if you're feeling generous:  
+<bitcoin:1FNdKYvFX9wtxBp4zBYNkYbB6UUC5tGpYm?label=Frankenmint's%20Python%20Escrow%20Script%20Tip%20Jar>1FNdKYvFX9wtxBp4zBYNkYbB6UUC5tGpYm
