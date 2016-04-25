@@ -77,9 +77,9 @@ send_email(host, subject, to_addr, from_addr, body_text)
 
 while True:
 	print "Checking %s for Payments" % (address)
-	req = requests.get("https://chain.so/api/v2/get_address_balance/BTC/"+address)
+	req = requests.get("https://blockexplorer.com/api/addr/"+address)
 	pmts = req.json()
-	balance =  pmts['data']['confirmed_balance']
+	balance =  pmts['totalRecieved']
 	print balance
 
 	if float(balance) >= float(amountDue):
@@ -91,7 +91,7 @@ while True:
 		break
 	else:
 		print "Still Waiting..."
-		print "Will Try again in 10 Seconds..."
-		sleep(10)
+		print "Will Try again in 3 Seconds..."
+		sleep(3)
 		
 
