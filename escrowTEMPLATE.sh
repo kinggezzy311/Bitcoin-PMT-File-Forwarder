@@ -78,8 +78,14 @@ send_email(host, subject, to_addr, from_addr, body_text)
 while True:
 	print "Checking %s for Payments" % (address)
 	req = requests.get("https://blockexplorer.com/api/addr/"+address)
-	pmts = req.json()
-	balance =  pmts['totalRecieved']
+	try:
+		pmts = req.json()
+	except ValueError:
+		print "Connection Timed out"
+		sleep(5)
+		pmts = {}
+		pmts["totalReceived"] = 0
+	balance =  pmts['totalReceived']
 	print balance
 
 	if float(balance) >= float(amountDue):
