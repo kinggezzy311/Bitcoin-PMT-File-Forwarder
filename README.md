@@ -29,6 +29,7 @@ Video Demonstration of what SHOULD Happen
 1. I wrote this on OSX so if you're using windows, you will need to likely remove the first line then change the extension to `.py` from `.sh`.  Now you should be able to run the script in windows by using `python escrow.py {args}`
 2. The Script I'm acutally using in practice has all but the first argv[x] variables commented out...I did this because I intend on using this script for a sole client and it would be excessive for me to enter in those arguments each time.  I also have setup my file such that the arguments are stored there (but didn't think it made sense to impose that restriction when designing this script)
 3. This script hasn't been tested extensively...if you use the same address to receive payments more than once the mechanism will not work as intended as it releases funds based on the confirmed amount being greater than or equal to the payment amount set.
+4. As of 4-25-2016 there is a loader file that you should run instead.  I.e: `loader.sh {args}` This change will allow you to run the script in a terminal window on a remote server and disconnect without killing the script...you'll see that it does not load the console output anymore...to see the console output again like before just type `screen -r` to resume the screen created by the loader and see the payment data lookups as they happen.
 
 
 #TODO:
