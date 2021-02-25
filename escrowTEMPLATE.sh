@@ -9,7 +9,7 @@ from time import sleep
 priceRate 		= 75 #USD - change bitcoinData to get other currencies
 fileName        = sys.argv[1]
 emailAddress	= sys.argv[2]
-paymentAddress 	= sys.argv[3] # 1Kmib4CidHnpKh2dge68yzaH1aviB7DjxR
+paymentAddress 	= sys.argv[3] # 37zFquAR8Aknr9EiTHTBd5p3E6PwPM1zmD
 productSample  	= sys.argv[4] # http://g.recordit.co/7yes2i5gUa.gif 
 host 			= "{SMTP Server Address}"
 usrnme 			= "{SMTP User Name}"
